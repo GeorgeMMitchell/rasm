@@ -1,0 +1,82 @@
+# RASM clang-format
+
+---
+BasedOnStyle: Google
+IndentWidth: 8
+ColumnLimit: 79
+InsertNewlineAtEOF: true
+
+# Tabs
+UseTab: Always
+TabWidth: 8
+ContinuationIndentWidth: 2
+
+# Preprocessor Macros
+AlignConsecutiveMacros: AcrossComments
+AlignEscapedNewlines: DontAlign
+PPIndentWidth: 0
+IndentPPDirectives: AfterHash
+
+# Headers
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: <librasm/test
+    Priority: 7
+  - Regex: <librasm/lib/charconv/
+    Priority: 6
+  - Regex: <librasm/lib/token/
+    Priority: 5
+  - Regex: <librasm/lib/(debug|error)\.h
+    Priority: 4
+  - Regex: <librasm/lib/
+    Priority: 3
+  - Regex: <librasm/
+    Priority: 2
+  - Regex: <(assert|ctype|errno|float|limits|locale|math|setjmp|signal|stdarg|stddef|stdio|stdlib|string|time)\.h
+    Priority: 1
+
+# Comments
+AlignTrailingComments: Always
+
+# Qualifiers
+QualifierAlignment: Left
+
+# Enums
+AllowShortEnumsOnASingleLine: true
+
+# Functions
+AllowShortFunctionsOnASingleLine: true
+
+# Pointers
+DerivePointerAlignment: false
+PointerAlignment: Right
+
+# Control Flow
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLoopsOnASingleLine: true
+AllowShortBlocksOnASingleLine: true
+InsertBraces: true
+
+# Structures
+BitFieldColonSpacing: Both
+AlignConsecutiveBitFields: Consecutive
+AlignArrayOfStructures: Right
+
+# Statements
+AlignOperands: AlignAfterOperator
+
+AlignConsecutiveAssignments:
+  Enabled: true
+  AlignCompound: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+  PadOperators: true
+
+AlignAfterOpenBracket: DontAlign
+
+AlignConsecutiveDeclarations: false
+
+BreakBeforeBraces: Linux
+
+AlwaysBreakAfterDefinitionReturnType: All
+...
